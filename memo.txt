@@ -1,0 +1,54 @@
+# 構成ファイル
+
+pages/
+  - ページファイルを置くディレクトリ
+  - index.js -> /
+  - posts/first-post.js -> /posts/first-post
+  posts/
+    first-post.js
+  _app.js
+    - （多分）ルートコンポーネント
+    - 共通スタイルを読み込んでいる
+  index.js
+components/
+  - コンポーネントを置くディレクトリ
+  layout.js
+  layout.module.css
+    - コンポーネント用CSS
+    - クラスを定義するのかな
+styles/
+  global.css
+    - 共通スタイル
+    - _app.jsで読み込んでいる
+  utils.module.css
+    - どこでも使えるユーティリティスタイル
+public/
+  images/
+    - 画像
+    profile.jpg
+  favicon.ico
+  vercel.svg
+.next/
+  cache/
+  server/
+  static/
+  build-manifest.json
+  react-loadable-manifest.json
+node_modules/
+package.json
+
+# フォーム
+
+# 事前データの準備
+
+```
+export async function getStaticProps() {
+  // APIとかで非同期でデータ取得する
+  const data = await ...
+
+  return {
+    props: data
+  }
+}
+```
+
